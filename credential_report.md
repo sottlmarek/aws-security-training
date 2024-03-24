@@ -15,7 +15,6 @@ Learn how to generate and analyze an IAM credential report in AWS to enhance you
 
 Start by generating a new IAM credential report. This report will contain details about each IAM user's status within your AWS account.
 
-bashCopy code
 
 `aws iam generate-credential-report` 
 
@@ -25,7 +24,6 @@ You should see a response indicating that the report generation has started or i
 
 Once the report generation is complete, retrieve the generated IAM credential report using the following command:
 
-bashCopy code
 
 `aws iam get-credential-report` 
 
@@ -35,7 +33,6 @@ This will return a JSON object, including the credential report in a base64-enco
 
 To decode and view the content of the credential report in a human-readable format, use the following command:
 
-bashCopy code
 
 `aws iam get-credential-report --output text --query Content | base64 --decode` 
 
