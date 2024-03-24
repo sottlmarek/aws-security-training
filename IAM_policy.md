@@ -43,7 +43,6 @@ Use the AWS Management Console or the AWS CLI to create the policy with the JSON
 
 If you prefer using the AWS CLI, save your policy document as `s3_policy.json` and execute the following command:
 
-bashCopy code
 
 `aws iam create-policy --policy-name S3_TrainingBucketAccessPolicy --policy-document file://s3_policy.json` 
 
@@ -64,13 +63,11 @@ After creating the policy, attach it to an IAM user or role that requires these 
 
 To attach the policy to a user, use the following command, replacing `Jim` with the actual user's name:
 
-bashCopy code
 
 `aws iam attach-user-policy --user-name Jim --policy-arn arn:aws:iam::aws:policy/S3_TrainingBucketAccessPolicy` 
 
 To attach it to a role, replace `RoleName` with the actual role's name:
 
-bashCopy code
 
 `aws iam attach-role-policy --role-name RoleName --policy-arn arn:aws:iam::aws:policy/S3_TrainingBucketAccessPolicy` 
 
